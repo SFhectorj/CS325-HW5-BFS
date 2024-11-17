@@ -10,9 +10,9 @@ def minEffort(puzzle):
 
     def reachDestination():
         """
-
-        :return:
+        This is a helper function to check if reaching the bottom right corner is feasible using
+        the given maximum effort.
         """
-        # Start with a queue
+        # Start with a queue; more efficient than list
 
     return

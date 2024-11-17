@@ -1,4 +1,10 @@
 def minEffort(puzzle):
+    """
+    :param puzzle:
+    This function will use binary search and  breadth-first search to traverse a 2D matrix.
+    The algorithm will reach the destination with minimal effort bu finding the lowest maximum
+    difference of the column/row heights.
+    """
     number_of_rows = len(puzzle)
     number_of_columns = len(puzzle[0])
 

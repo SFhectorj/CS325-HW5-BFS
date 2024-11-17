@@ -1,1 +1,2 @@
 def minEffort(puzzle):
+    return

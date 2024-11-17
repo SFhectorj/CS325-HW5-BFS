@@ -5,7 +5,14 @@ def minEffort(puzzle):
     The algorithm will reach the destination with minimal effort bu finding the lowest maximum
     difference of the column/row heights.
     """
-    number_of_rows = len(puzzle)
     number_of_columns = len(puzzle[0])
+    number_of_rows = len(puzzle)
+
+    def reachDestination():
+        """
+
+        :return:
+        """
+        # Start with a queue
 
     return

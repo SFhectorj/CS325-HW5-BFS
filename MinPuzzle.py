@@ -22,7 +22,12 @@ def minEffort(puzzle):
         # BREADTH-FIRST SEARCH
         while current_queue:
             # popleft() method in Python is used to remove and return the first element (leftmost element) from a deque object.
-            number_of_rows = current_queue.popleft()
+            current_row = current_queue.popleft()
+            current_column = current_queue.popleft()
+
+            # Edgecase: the bottom right corner is reached
+            if (current_row, current_column) == (number_of_rows - 1, number_of_columns - 1):
+                return True
 
 
 

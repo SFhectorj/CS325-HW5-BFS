@@ -31,9 +31,15 @@ def minEffort(puzzle):
 
             # Edgecase: the bottom right corner is reached
             if (current_row, current_column) == (number_of_rows - 1, number_of_columns - 1):
+                # Loop to check all possible directions
                 for row, column in directions:
                     newRow = current_row + row
                     newCol = current_column + column
+
+                # Edgecases for new position:
+                # Is within bounds,
+                # Not previously visited
+                
 
 
                 return True

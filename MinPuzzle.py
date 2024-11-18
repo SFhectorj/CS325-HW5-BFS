@@ -9,7 +9,7 @@ def minEffort(puzzle):
     number_of_columns = len(puzzle[0])
     number_of_rows = len(puzzle)
 
-    def reachDestination():
+    def reachDestination(maxEffort):
         """
         This is a helper function to check if reaching the bottom right corner is feasible using the given maximum effort.
         """
@@ -44,4 +44,7 @@ def minEffort(puzzle):
                 if 0 <= newRow < number_of_rows and 0 <= newCol < number_of_columns and (newRow, newCol) not in already_visited:
                     # Now get the height difference between the current cell and the new cell.
                     height_difference = puzzle[newRow][newCol] - puzzle[current_row][current_column]
+
+                    # When the height difference meets the edgecases, visit new cell.
+                    if height_difference <= maxEffort:
 

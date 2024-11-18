@@ -17,5 +17,11 @@ def minEffort(puzzle):
         """
         # Start with a queue; top left corner (0,0)
         queue = deque([(0, 0)])
+        # Using a set will automatically remove dupes
+        already_visited = set()
+        already_visited.add((0, 0))
+
+        # BREADTH-FIRST SEARCH
+
 
     return

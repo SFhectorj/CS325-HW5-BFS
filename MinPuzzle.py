@@ -19,6 +19,10 @@ def minEffort(puzzle):
         already_visited = set()
         already_visited.add((0, 0))
 
+        # Set the possible movement directions
+        # [Up, Down, Left, Right]
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
         # BREADTH-FIRST SEARCH
         while current_queue:
             # popleft() method is used to remove and return the first element (leftmost element) from a deque object.

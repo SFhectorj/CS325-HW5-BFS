@@ -47,4 +47,8 @@ def minEffort(puzzle):
 
                     # When the height difference meets the edgecases, visit new cell.
                     if height_difference <= maxEffort:
+                        already_visited.add(newRow, newCol)
+                        current_queue.append((newRow, newCol))
+
+        return False
 

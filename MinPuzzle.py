@@ -1,3 +1,5 @@
+from collections import deque
+
 def minEffort(puzzle):
     """
     :param puzzle:

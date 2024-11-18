@@ -36,10 +36,10 @@ def minEffort(puzzle):
                     newRow = current_row + row
                     newCol = current_column + column
 
-                # Edgecases for new position:
-                # Is within bounds,
-                # Not previously visited
-                
+                    # Edgecases for new position:
+                    # Is within bounds,
+                    # Not previously visited
+                    if 0 <= newRow < number_of_rows and 0 <= newCol < number_of_columns and (newRow, newCol) not in already_visited:
 
 
                 return True

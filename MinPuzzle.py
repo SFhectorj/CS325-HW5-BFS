@@ -15,6 +15,7 @@ def minEffort(puzzle):
         This is a helper function to check if reaching the bottom right corner is feasible using
         the given maximum effort.
         """
-        # Start with a queue; more efficient than list
+        # Start with a queue; top left corner (0,0)
+        queue = deque([(0, 0)])
 
     return

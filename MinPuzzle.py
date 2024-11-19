@@ -53,7 +53,7 @@ def minEffort(puzzle):
         return False
 
     # BINARY SEARCH
-    # Initialize
+    # 1: Initialize
     left_side = 0   # min effort (always zero)
     right_side = 0  # max effort
 
@@ -70,8 +70,10 @@ def minEffort(puzzle):
                 # Calculate height and store
                 right_side = max(right_side, abs(puzzle[i][j] - puzzle[j + 1][j]))
 
-    # SEARCH
+    # 2: SEARCH
     # find the min possible effort
+    while left_side < right_side:
+        mid_point = (left_side + right_side) // 2
 
 
 

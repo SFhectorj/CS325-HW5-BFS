@@ -43,7 +43,7 @@ def minEffort(puzzle):
                 # Not previously visited
                 if 0 <= newRow < number_of_rows and 0 <= newCol < number_of_columns and (newRow, newCol) not in already_visited:
                     # Now get the height difference between the current cell and the new cell.
-                    height_difference = puzzle[newRow][newCol] - puzzle[current_row][current_column]
+                    height_difference = abs(puzzle[newRow][newCol] - puzzle[current_row][current_column])
 
                     # When the height difference meets the edgecases, visit new cell.
                     if height_difference <= maxEffort:

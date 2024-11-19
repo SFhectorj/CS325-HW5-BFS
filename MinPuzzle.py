@@ -75,6 +75,13 @@ def minEffort(puzzle):
     while left_side < right_side:
         mid_point = (left_side + right_side) // 2
 
+        # Check if destination can be reached with midpoint
+        if reachDestination(mid_point):
+            right_side = mid_point
+        else:
+            left_side = mid_point + 1
+            
+
 
 
 

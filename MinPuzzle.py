@@ -1,3 +1,4 @@
+from collections import deque
 
 def minEffort(puzzle):
     """
@@ -33,8 +34,7 @@ def minEffort(puzzle):
 
             # Loop to check all possible directions
             for row, column in directions:
-                newRow = current_row + row
-                newCol = current_column + column
+                newRow, newCol = current_row + row, current_column + column
 
                 # Edgecases for new position:
                 # Is within bounds,
@@ -45,7 +45,7 @@ def minEffort(puzzle):
 
                     # When the height difference meets the edgecases, visit new cell.
                     if height_difference <= maxEffort:
-                        already_visited.add(newRow, newCol)
+                        already_visited.add((newRow, newCol))
                         current_queue.append((newRow, newCol))
 
         return False
@@ -80,7 +80,3 @@ def minEffort(puzzle):
             left_side = mid_point + 1
 
     return left_side
-
-
-
-

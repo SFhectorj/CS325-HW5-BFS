@@ -57,5 +57,8 @@ def minEffort(puzzle):
     left_side = 0   # min effort
     right_side = 0  # max effort
 
-    
+    # Find the maximum abs difference
+    # by looping through all cells
+    for i in range(number_of_rows):
+        for j in range
 

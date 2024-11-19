@@ -25,8 +25,7 @@ def minEffort(puzzle):
 
         # BREADTH-FIRST SEARCH
         while len(current_queue) > 0:
-            current_row, current_column = current_queue[0]
-            current_queue.pop()
+            current_row, current_column = current_queue.popleft() # Popleft will provide FIFO behavior
 
             # Edgecase: the bottom right corner is reached
             if (current_row, current_column) == (number_of_rows - 1, number_of_columns - 1):
@@ -80,3 +79,10 @@ def minEffort(puzzle):
             left_side = mid_point + 1
 
     return left_side
+
+# Example usage:
+puzzle = [[1, 3, 5],
+          [2, 8, 3],
+          [3, 4, 5]]
+
+print("Minimum Effort:", minEffort(puzzle))  # Output: 1

@@ -60,5 +60,8 @@ def minEffort(puzzle):
     # Find the maximum abs difference
     # by looping through all cells
     for i in range(number_of_rows):
-        for j in range
+        for j in range(number_of_columns):
+            # Check the next cell on the right to make sure its in bound
+            if j + 1 < number_of_columns:
+                right_side = max(right_side, abs(puzzle[i][j] - puzzle[i][j + 1]))
 

@@ -79,10 +79,3 @@ def minEffort(puzzle):
             left_side = mid_point + 1
 
     return left_side
-
-# Example usage:
-puzzle = [[1, 3, 5],
-          [2, 8, 3],
-          [3, 4, 5]]
-
-print("Minimum Effort:", minEffort(puzzle))  # Output: 1

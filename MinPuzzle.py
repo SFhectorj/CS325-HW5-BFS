@@ -53,17 +53,26 @@ def minEffort(puzzle):
         return False
 
     # BINARY SEARCH
-    # Initialize range
-    left_side = 0   # min effort
+    # Initialize
+    left_side = 0   # min effort (always zero)
     right_side = 0  # max effort
 
     # Find the maximum abs difference
     # by looping through all cells
     for i in range(number_of_rows):
         for j in range(number_of_columns):
-            # Check the next cell on the right 
+            # Check the next cell on the right
             if j + 1 < number_of_columns:
+                # Calculate height and store
                 right_side = max(right_side, abs(puzzle[i][j] - puzzle[i][j + 1]))
             # Check the cell at the bottom
             if i + 1 < number_of_rows:
+                # Calculate height and store
+                right_side = max(right_side, abs(puzzle[i][j] - puzzle[j + 1][j]))
+
+    # SEARCH
+    # find the min possible effort
+
+
+
 

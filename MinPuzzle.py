@@ -61,7 +61,9 @@ def minEffort(puzzle):
     # by looping through all cells
     for i in range(number_of_rows):
         for j in range(number_of_columns):
-            # Check the next cell on the right to make sure its in bound
+            # Check the next cell on the right 
             if j + 1 < number_of_columns:
                 right_side = max(right_side, abs(puzzle[i][j] - puzzle[i][j + 1]))
+            # Check the cell at the bottom
+            if i + 1 < number_of_rows:
 

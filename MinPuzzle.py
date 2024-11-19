@@ -1,4 +1,3 @@
-from collections import deque
 
 def minEffort(puzzle):
     """
@@ -24,10 +23,9 @@ def minEffort(puzzle):
         directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
         # BREADTH-FIRST SEARCH
-        while current_queue:
-            # popleft() method is used to remove and return the first element (leftmost element) from a deque object.
-            current_row = current_queue.popleft()
-            current_column = current_queue.popleft()
+        while len(current_queue) > 0:
+            current_row, current_column = current_queue[0]
+            current_queue.pop()
 
             # Edgecase: the bottom right corner is reached
             if (current_row, current_column) == (number_of_rows - 1, number_of_columns - 1):
@@ -68,7 +66,7 @@ def minEffort(puzzle):
             # Check the cell at the bottom
             if i + 1 < number_of_rows:
                 # Calculate height and store
-                right_side = max(right_side, abs(puzzle[i][j] - puzzle[j + 1][j]))
+                right_side = max(right_side, abs(puzzle[i][j] - puzzle[i + 1][j]))
 
     # 2: SEARCH
     # find the min possible effort
@@ -82,8 +80,6 @@ def minEffort(puzzle):
             left_side = mid_point + 1
 
     return left_side
-
-
 
 
 

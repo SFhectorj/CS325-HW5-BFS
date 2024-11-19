@@ -51,4 +51,7 @@ def minEffort(puzzle):
                         current_queue.append((newRow, newCol))
 
         return False
+    # BINARY SEARCH
+    # Initialize range
+    
 
